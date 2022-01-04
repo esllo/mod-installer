@@ -1,0 +1,33 @@
+{
+  "name": "mod-installer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "electron": "electron .",
+    "build:win": "electron-builder --win --x64"
+  },
+  "author": "esllo",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "unzipper": "^0.10.11"
+  },
+  "devDependencies": {
+    "electron": "^16.0.6",
+    "electron-builder": "^22.14.5"
+  },
+  "build": {
+    "productName": "modpack-installer",
+    "appId": "esllo.modpack-installer",
+    "asar": false,
+    "win": {
+      "target": ["portable"],
+      "icon": "mokoko_k.png"
+    },
+    "portable": {
+      "artifactName": "modpack-installer.exe",
+      "requestExecutionLevel": "admin"
+    },
+    "publish": null
+  }
+}
