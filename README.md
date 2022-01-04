@@ -23,3 +23,14 @@ simple minecraft fabric, mod installer
      |--- mods.zip
      |--- shaderpacks.zip
 ```
+
+## icons
+- coconut-emoji https://blog.daum.net/coconut-emoji
+  - mokoko_k.png
+  - 32.gif
+- discord https://discord.com/branding
+  - discord_icon.png
+- fabric https://fabricmc.net/
+  - fabric_icon.png
+- minecraft
+  - modded_icon.png
