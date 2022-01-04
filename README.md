@@ -6,7 +6,7 @@ simple minecraft fabric, mod installer
 
 ## build
 `yarn build:win`  
-> generated portable exe is located in /dist/modpack-installer.exe
+> generated portable exe is located in `/dist/modpack-installer.exe`
 
 ## fabric.zip
 ```
