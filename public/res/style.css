@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Sans-serif";
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.title {
+  height: 32px;
+  background-color: rgb(58, 57, 57);
+  color: #eeeeee;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.title-name {
+  margin-left: 8px;
+  font-size: 14px;
+  flex: 1;
+  -webkit-app-region: drag;
+}
+
+.title-name > span > small {
+  margin-left: 6px;
+  color: rgb(106, 168, 219);
+}
+
+.exit {
+  width: 48px;
+  height: 32px;
+  -webkit-app-region: no-drag;
+  position: relative;
+}
+.exit::after {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  content: "\00d7";
+  background: #0000;
+  transition: all 0.3s;
+  font-size: 20px;
+}
+.exit:hover:after {
+  background: rgb(230, 15, 15);
+}
+
+.content {
+  position: relative;
+  flex: 1;
+  background: rgb(211, 211, 211);
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info {
+  font-size: 12px;
+  line-height: 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  padding: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.5s;
+}
+
+.button:hover > .icon > img {
+  transform: scale(1.25);
+}
+
+.button:hover > span {
+  transform: translateY(20%) scale(1.2);
+}
+
+.button > .icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.button > .icon > img {
+  transition: all 0.5s;
+  width: 50px;
+}
+
+.button > span {
+  display: inline-block;
+  text-align: center;
+  word-break: keep-all;
+  font-size: 13px;
+  padding: 6px 0;
+  transition: all 0.5s;
+}
+
+.content-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  transform: translateY(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  opacity: 0;
+}
+
+.content-overlay.show {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.content-overlay > img {
+  width: 100px;
+  height: 100px;
+}
